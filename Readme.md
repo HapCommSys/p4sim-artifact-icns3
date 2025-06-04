@@ -98,3 +98,12 @@ The `Evaluation` section of paper:
 
 
 PS: Some of the Documents is helped writed with DeepSeek.
+
+## References
+
+PS: Some of the Documents is helped writed with DeepSeek.
+
+- [1] basic_tunnel in [p4lang/tutorials/baisc_tunnel](https://github.com/p4lang/tutorials/tree/master/exercises/basic_tunnel)
+- [2] firewall in [p4lang/tutorials/firewall](https://github.com/p4lang/tutorials/tree/master/exercises/firewall)
+- [3] load_balance in [p4lang/tutorials/load_balance](https://github.com/p4lang/tutorials/tree/master/exercises/load_balance)
+- [4] p4_basic in [p4lang/tutorials/basic](https://github.com/p4lang/tutorials/tree/master/exercises/basic)
