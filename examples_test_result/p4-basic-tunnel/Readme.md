@@ -49,6 +49,28 @@ Current the tracing inner ns-3 can not trace the data correctly, but the trace w
 
 From the figure, there are two flows, one with **Noraml UDP** and **the other with custom header**, sending from one hosts to the end point.
 
+wireshark with the header tunnel (but this may not directly detected by wireshark)
+
+Another debug approach is [print the packets with all headers.](https://github.com/HapCommSys/p4sim/blob/main/model/p4-switch-net-device.cc#L266-L269)
+
+```c++
+// @debug
+        // std::cout << "* Switch Port *** Receive from Device: " << std::endl;
+        // ns3Packet->Print(std::cout);
+        // std::cout << ns3Packet->GetSize() << std::endl;
+
+// And you will get that (This is logging with sender side.), check the https://github.com/HapCommSys/p4sim/blob/main/logs/header_custom.log for more:
+***Netdevice: Sending: before adding the custom header 
+ns3::Ipv4Header (tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 0 protocol 17 offset (bytes) 0 flags [none] length: 1028 10.1.1.1 > 10.1.1.2) ns3::UdpHeader (length: 1008 49153 > 12000) Payload (size=1000) 
+***Netdevice: Sending: after adding the custom header 
+ns3::EthernetHeader ( length/type=0x12, source=00:00:00:00:00:01, destination=ff:ff:ff:ff:ff:ff) ns3::CustomHeader (CustomHeader { proto_id: 0x800 dst_id: 0x22 }) ns3::Ipv4Header (tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 0 protocol 17 offset (bytes) 0 flags [none] length: 1028 10.1.1.1 > 10.1.1.2) ns3::UdpHeader (length: 1008 49153 > 12000) Payload (size=1000) 
+***Netdevice: Sending: before adding the custom header 
+ns3::Ipv4Header (tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 1 protocol 17 offset (bytes) 0 flags [none] length: 1028 10.1.1.1 > 10.1.1.2) ns3::UdpHeader (length: 1008 49153 > 12000) Payload (size=1000) 
+***Netdevice: Sending: after adding the custom header 
+ns3::EthernetHeader ( length/type=0x12, source=00:00:00:00:00:01, destination=FF:FF:FF:FF:FF:FF) ns3::CustomHeader (CustomHeader { proto_id: 0x800 dst_id: 0x22 }) ns3::Ipv4Header (tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 1 protocol 17 offset (bytes) 0 flags [none] length: 1028 10.1.1.1 > 10.1.1.2) ns3::UdpHeader (length: 1008 49153 > 12000) Payload (size=1000) 
+```
+
+
 ![wireshark with the header tunnel (but this can not directly detected by wireshark)](./wireshark_check_1.png)
 
 From the result of the `*.pcap`:
