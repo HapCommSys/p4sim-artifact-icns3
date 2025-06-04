@@ -1,0 +1,446 @@
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.806s)
+*** Congestion bottleneck: 1000 Mbps, packet size: 1000 Bytes, switch bottleneck: 125000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+Running simulation...
+Simulate Running time: 60ms
+Total Running time: 90ms
+Run successfully!
+client_start_time: 3.08client_stop_time: 5.992sink_start_time: 3.10896sink_stop_time: 6.18986
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 374000 bytes in time 2.912
+Total Received Bytes: 374000 bytes in time 3.0809
+Final Transmitted Throughput: 1.02747 Mbps
+Final Received Throughput: 0.971146 Mbps
+======================================
+
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.861s)
+*** Congestion bottleneck: 1000 Mbps, packet size: 1000 Bytes, switch bottleneck: 125000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+Running simulation...
+Simulate Running time: 614ms
+Total Running time: 648ms
+Run successfully!
+client_start_time: 3.008client_stop_time: 5.9992sink_start_time: 3.0163sink_stop_time: 6.12343
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 3749000 bytes in time 2.9912
+Total Received Bytes: 3681000 bytes in time 3.10713
+Final Transmitted Throughput: 10.0267 Mbps
+Final Received Throughput: 9.47754 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.650s)
+*** Congestion bottleneck: 1000 Mbps, packet size: 1000 Bytes, switch bottleneck: 125000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+Running simulation...
+Simulate Running time: 1216ms
+Total Running time: 1247ms
+Run successfully!
+client_start_time: 3.004client_stop_time: 5.9996sink_start_time: 3.01115sink_stop_time: 6.11744
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 7499000 bytes in time 2.9956
+Total Received Bytes: 7350000 bytes in time 3.10629
+Final Transmitted Throughput: 20.0267 Mbps
+Final Received Throughput: 18.9293 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.678s)
+*** Congestion bottleneck: 1000 Mbps, packet size: 1000 Bytes, switch bottleneck: 125000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+Running simulation...
+Simulate Running time: 1828ms
+Total Running time: 1859ms
+Run successfully!
+client_start_time: 3.00267client_stop_time: 5.99974sink_start_time: 3.00943sink_stop_time: 6.127
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 11249000 bytes in time 2.99707
+Total Received Bytes: 11060000 bytes in time 3.11757
+Final Transmitted Throughput: 30.0267 Mbps
+Final Received Throughput: 28.3811 Mbps
+======================================
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.662s)
+*** Congestion bottleneck: 1000 Mbps, packet size: 1000 Bytes, switch bottleneck: 125000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+Running simulation...
+Simulate Running time: 2440ms
+Total Running time: 2473ms
+Run successfully!
+client_start_time: 3.002client_stop_time: 5.9998sink_start_time: 3.00858sink_stop_time: 6.13497
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 14999000 bytes in time 2.9978
+Total Received Bytes: 14785000 bytes in time 3.12639
+Final Transmitted Throughput: 40.0267 Mbps
+Final Received Throughput: 37.8328 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.669s)
+*** Congestion bottleneck: 1000 Mbps, packet size: 1000 Bytes, switch bottleneck: 125000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+Running simulation...
+Simulate Running time: 2997ms
+Total Running time: 3028ms
+Run successfully!
+client_start_time: 3.0016client_stop_time: 5.99984sink_start_time: 3.00806sink_stop_time: 6.14076
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 18749000 bytes in time 2.99824
+Total Received Bytes: 18516000 bytes in time 3.1327
+Final Transmitted Throughput: 50.0267 Mbps
+Final Received Throughput: 47.2845 Mbps
+======================================
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.645s)
+*** Congestion bottleneck: 1000 Mbps, packet size: 1000 Bytes, switch bottleneck: 125000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+Running simulation...
+Simulate Running time: 3665ms
+Total Running time: 3696ms
+Run successfully!
+client_start_time: 3.00133client_stop_time: 5.99999sink_start_time: 3.00772sink_stop_time: 6.14517
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 22500000 bytes in time 2.99866
+Total Received Bytes: 22251000 bytes in time 3.13745
+Final Transmitted Throughput: 60.0268 Mbps
+Final Received Throughput: 56.7365 Mbps
+======================================
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.646s)
+*** Congestion bottleneck: 1000 Mbps, packet size: 1000 Bytes, switch bottleneck: 125000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+Running simulation...
+Simulate Running time: 4231ms
+Total Running time: 4262ms
+Run successfully!
+client_start_time: 3.00114client_stop_time: 5.99989sink_start_time: 3.00747sink_stop_time: 6.14855
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 26249000 bytes in time 2.99875
+Total Received Bytes: 25988000 bytes in time 3.14108
+Final Transmitted Throughput: 70.0265 Mbps
+Final Received Throughput: 66.1887 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.633s)
+*** Congestion bottleneck: 1000 Mbps, packet size: 1000 Bytes, switch bottleneck: 125000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+Running simulation...
+Simulate Running time: 4875ms
+Total Running time: 4907ms
+Run successfully!
+client_start_time: 3.001client_stop_time: 5.9999sink_start_time: 3.00729sink_stop_time: 6.15114
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 29999000 bytes in time 2.9989
+Total Received Bytes: 29725000 bytes in time 3.14385
+Final Transmitted Throughput: 80.0267 Mbps
+Final Received Throughput: 75.6398 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.660s)
+*** Congestion bottleneck: 1000 Mbps, packet size: 1000 Bytes, switch bottleneck: 125000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+Running simulation...
+Simulate Running time: 5429ms
+Total Running time: 5461ms
+Run successfully!
+client_start_time: 3.00089client_stop_time: 5.99991sink_start_time: 3.00715sink_stop_time: 6.15335
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 33749000 bytes in time 2.99903
+Total Received Bytes: 33465000 bytes in time 3.14621
+Final Transmitted Throughput: 90.0266 Mbps
+Final Received Throughput: 85.0929 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.668s)
+*** Congestion bottleneck: 1000 Mbps, packet size: 1000 Bytes, switch bottleneck: 125000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+Running simulation...
+Simulate Running time: 5963ms
+Total Running time: 5995ms
+Run successfully!
+client_start_time: 3.0008client_stop_time: 5.99992sink_start_time: 3.00703sink_stop_time: 6.15513
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 37499000 bytes in time 2.99912
+Total Received Bytes: 37204000 bytes in time 3.1481
+Final Transmitted Throughput: 100.027 Mbps
+Final Received Throughput: 94.5434 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.640s)
+*** Congestion bottleneck: 1000 Mbps, packet size: 1000 Bytes, switch bottleneck: 125000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+Running simulation...
+Simulate Running time: 59827ms
+Total Running time: 59861ms
+Run successfully!
+client_start_time: 3.00008client_stop_time: 5.99999sink_start_time: 3.0061sink_stop_time: 6.08742
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 374999000 bytes in time 2.99991
+Total Received Bytes: 364059000 bytes in time 3.08131
+Final Transmitted Throughput: 1000.03 Mbps
+Final Received Throughput: 945.206 Mbps
+======================================
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.630s)
+*** Congestion bottleneck: 1000 Mbps, packet size: 1000 Bytes, switch bottleneck: 125000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+Running simulation...
+Simulate Running time: 589380ms
+Total Running time: 589413ms
+Run successfully!
+client_start_time: 3.00001client_stop_time: 6sink_start_time: 3.00601sink_stop_time: 6.00874
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 3749999000 bytes in time 2.99999
+Total Received Bytes: 3553530000 bytes in time 3.00272
+Final Transmitted Throughput: 10000 Mbps
+Final Received Throughput: 9467.48 Mbps
+======================================
+
+(p4dev-python-venv) p4@p4:~/workdir/ns3.35$ ./waf --run "p4-ipv4-forwarding-test --pcap=false --simType=1 --appDataRate=100000Mbps --ns3_link_rate=100000Mbps"
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.920s)
+*** Congestion bottleneck: 1000 Mbps, packet size: 1000 Bytes, switch bottleneck: 125000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+Running simulation...
+Simulate Running time: 6054727ms
+Total Running time: 6054759ms
+Run successfully!
+client_start_time: 3client_stop_time: 6sink_start_time: 3.006sink_stop_time: 6.00086
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 37499999000 bytes in time 3
+Total Received Bytes: 36082603000 bytes in time 2.99486
+Final Transmitted Throughput: 100000 Mbps
+Final Received Throughput: 96385.6 Mbps
+======================================
+(p4dev-python-venv) p4@p4:~/workdir/ns3.35$ 

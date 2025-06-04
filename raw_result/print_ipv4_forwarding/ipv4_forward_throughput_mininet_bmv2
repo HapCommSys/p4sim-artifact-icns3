@@ -1,0 +1,527 @@
+Running iperfudp test 1/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1M', '975.2 kbits/sec', '1.1 Mbits/sec']
+['1M', '975.2 kbits/sec', '1.1 Mbits/sec']
+Running iperfudp test 2/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1M', '974.3 kbits/sec', '1.1 Mbits/sec']
+['1M', '974.3 kbits/sec', '1.1 Mbits/sec']
+Running iperfudp test 3/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1M', '974.1 kbits/sec', '1.1 Mbits/sec']
+['1M', '974.1 kbits/sec', '1.1 Mbits/sec']
+Running iperfudp test 4/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1M', '973.5 kbits/sec', '1.1 Mbits/sec']
+['1M', '973.5 kbits/sec', '1.1 Mbits/sec']
+Running iperfudp test 5/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1M', '974.1 kbits/sec', '1.1 Mbits/sec']
+['1M', '974.1 kbits/sec', '1.1 Mbits/sec']
+Running iperfudp test 6/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1M', '974.0 kbits/sec', '1.1 Mbits/sec']
+['1M', '974.0 kbits/sec', '1.1 Mbits/sec']
+Running iperfudp test 7/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1M', '973.5 kbits/sec', '1.1 Mbits/sec']
+['1M', '973.5 kbits/sec', '1.1 Mbits/sec']
+Running iperfudp test 8/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1M', '973.3 kbits/sec', '1.1 Mbits/sec']
+['1M', '973.3 kbits/sec', '1.1 Mbits/sec']
+Running iperfudp test 9/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1M', '974.4 kbits/sec', '1.1 Mbits/sec']
+['1M', '974.4 kbits/sec', '1.1 Mbits/sec']
+Running iperfudp test 10/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1M', '974.3 kbits/sec', '1.1 Mbits/sec']
+['1M', '974.3 kbits/sec', '1.1 Mbits/sec']
+
+Average UDP Bandwidth over 10 runs: 1.10 Mbits/sec # (The match here is wrong, the matching character is on Mbits/sec)
+
+# ==========================================================================================
+# Record the 'actual sent bandwidth' data (unit: kbits/sec) for 10 tests
+throughput_values = [975.2, 974.3, 974.1, 973.5, 974.1, 974.0, 973.5, 973.3, 974.4, 974.3]
+
+# Calculate the average
+average_throughput = sum(throughput_values) / len(throughput_values)
+average_throughput
+# 974.07 kbits/sec
+# ==========================================================================================
+
+Running iperfudp test 1/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['10M', '9.3 Mbits/sec', '10.5 Mbits/sec']
+['10M', '9.3 Mbits/sec', '10.5 Mbits/sec']
+Running iperfudp test 2/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['10M', '9.4 Mbits/sec', '10.5 Mbits/sec']
+['10M', '9.4 Mbits/sec', '10.5 Mbits/sec']
+Running iperfudp test 3/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['10M', '9.3 Mbits/sec', '10.5 Mbits/sec']
+['10M', '9.3 Mbits/sec', '10.5 Mbits/sec']
+Running iperfudp test 4/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['10M', '9.4 Mbits/sec', '10.5 Mbits/sec']
+['10M', '9.4 Mbits/sec', '10.5 Mbits/sec']
+Running iperfudp test 5/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['10M', '9.2 Mbits/sec', '10.5 Mbits/sec']
+['10M', '9.2 Mbits/sec', '10.5 Mbits/sec']
+Running iperfudp test 6/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['10M', '9.1 Mbits/sec', '10.5 Mbits/sec']
+['10M', '9.1 Mbits/sec', '10.5 Mbits/sec']
+Running iperfudp test 7/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['10M', '9.5 Mbits/sec', '10.5 Mbits/sec']
+['10M', '9.5 Mbits/sec', '10.5 Mbits/sec']
+Running iperfudp test 8/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['10M', '9.0 Mbits/sec', '10.5 Mbits/sec']
+['10M', '9.0 Mbits/sec', '10.5 Mbits/sec']
+Running iperfudp test 9/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['10M', '8.3 Mbits/sec', '10.5 Mbits/sec']
+['10M', '8.3 Mbits/sec', '10.5 Mbits/sec']
+Running iperfudp test 10/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['10M', '8.4 Mbits/sec', '10.5 Mbits/sec']
+['10M', '8.4 Mbits/sec', '10.5 Mbits/sec']
+
+Average UDP Bandwidth over 10 runs: 9.09 Mbits/sec
+s1 -> gRPC port: 50051
+
+Running iperfudp test 1/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['20M', '18.2 Mbits/sec', '21.0 Mbits/sec']
+['20M', '18.2 Mbits/sec', '21.0 Mbits/sec']
+Running iperfudp test 2/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['20M', '17.5 Mbits/sec', '21.0 Mbits/sec']
+['20M', '17.5 Mbits/sec', '21.0 Mbits/sec']
+Running iperfudp test 3/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['20M', '18.0 Mbits/sec', '21.0 Mbits/sec']
+['20M', '18.0 Mbits/sec', '21.0 Mbits/sec']
+Running iperfudp test 4/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['20M', '17.7 Mbits/sec', '21.0 Mbits/sec']
+['20M', '17.7 Mbits/sec', '21.0 Mbits/sec']
+Running iperfudp test 5/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['20M', '16.2 Mbits/sec', '21.0 Mbits/sec']
+['20M', '16.2 Mbits/sec', '21.0 Mbits/sec']
+Running iperfudp test 6/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['20M', '16.7 Mbits/sec', '21.0 Mbits/sec']
+['20M', '16.7 Mbits/sec', '21.0 Mbits/sec']
+Running iperfudp test 7/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['20M', '16.3 Mbits/sec', '21.0 Mbits/sec']
+['20M', '16.3 Mbits/sec', '21.0 Mbits/sec']
+Running iperfudp test 8/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['20M', '16.6 Mbits/sec', '21.0 Mbits/sec']
+['20M', '16.6 Mbits/sec', '21.0 Mbits/sec']
+Running iperfudp test 9/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['20M', '15.9 Mbits/sec', '21.0 Mbits/sec']
+['20M', '15.9 Mbits/sec', '21.0 Mbits/sec']
+Running iperfudp test 10/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['20M', '14.7 Mbits/sec', '21.0 Mbits/sec']
+['20M', '14.7 Mbits/sec', '21.0 Mbits/sec']
+
+Average UDP Bandwidth over 10 runs: 16.78 Mbits/sec
+
+Running iperfudp test 1/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['30M', '27.8 Mbits/sec', '31.5 Mbits/sec']
+['30M', '27.8 Mbits/sec', '31.5 Mbits/sec']
+Running iperfudp test 2/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['30M', '27.9 Mbits/sec', '31.5 Mbits/sec']
+['30M', '27.9 Mbits/sec', '31.5 Mbits/sec']
+Running iperfudp test 3/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['30M', '27.6 Mbits/sec', '31.5 Mbits/sec']
+['30M', '27.6 Mbits/sec', '31.5 Mbits/sec']
+Running iperfudp test 4/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['30M', '27.9 Mbits/sec', '31.5 Mbits/sec']
+['30M', '27.9 Mbits/sec', '31.5 Mbits/sec']
+Running iperfudp test 5/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['30M', '27.5 Mbits/sec', '31.5 Mbits/sec']
+['30M', '27.5 Mbits/sec', '31.5 Mbits/sec']
+Running iperfudp test 6/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['30M', '26.8 Mbits/sec', '31.5 Mbits/sec']
+['30M', '26.8 Mbits/sec', '31.5 Mbits/sec']
+Running iperfudp test 7/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['30M', '26.5 Mbits/sec', '31.5 Mbits/sec']
+['30M', '26.5 Mbits/sec', '31.5 Mbits/sec']
+Running iperfudp test 8/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['30M', '27.7 Mbits/sec', '31.5 Mbits/sec']
+['30M', '27.7 Mbits/sec', '31.5 Mbits/sec']
+Running iperfudp test 9/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['30M', '27.7 Mbits/sec', '31.5 Mbits/sec']
+['30M', '27.7 Mbits/sec', '31.5 Mbits/sec']
+Running iperfudp test 10/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['30M', '27.6 Mbits/sec', '31.4 Mbits/sec']
+['30M', '27.6 Mbits/sec', '31.4 Mbits/sec']
+
+Average UDP Bandwidth over 10 runs: 27.50 Mbits/sec
+
+Running iperfudp test 1/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['40M', '36.8 Mbits/sec', '41.9 Mbits/sec']
+['40M', '36.8 Mbits/sec', '41.9 Mbits/sec']
+Running iperfudp test 2/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['40M', '37.3 Mbits/sec', '41.9 Mbits/sec']
+['40M', '37.3 Mbits/sec', '41.9 Mbits/sec']
+Running iperfudp test 3/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['40M', '38.2 Mbits/sec', '41.9 Mbits/sec']
+['40M', '38.2 Mbits/sec', '41.9 Mbits/sec']
+Running iperfudp test 4/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['40M', '37.3 Mbits/sec', '41.9 Mbits/sec']
+['40M', '37.3 Mbits/sec', '41.9 Mbits/sec']
+Running iperfudp test 5/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['40M', '38.0 Mbits/sec', '41.9 Mbits/sec']
+['40M', '38.0 Mbits/sec', '41.9 Mbits/sec']
+Running iperfudp test 6/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['40M', '37.2 Mbits/sec', '41.9 Mbits/sec']
+['40M', '37.2 Mbits/sec', '41.9 Mbits/sec']
+Running iperfudp test 7/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['40M', '36.1 Mbits/sec', '41.9 Mbits/sec']
+['40M', '36.1 Mbits/sec', '41.9 Mbits/sec']
+Running iperfudp test 8/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['40M', '36.4 Mbits/sec', '41.9 Mbits/sec']
+['40M', '36.4 Mbits/sec', '41.9 Mbits/sec']
+Running iperfudp test 9/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['40M', '36.7 Mbits/sec', '41.9 Mbits/sec']
+['40M', '36.7 Mbits/sec', '41.9 Mbits/sec']
+Running iperfudp test 10/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['40M', '36.3 Mbits/sec', '41.9 Mbits/sec']
+['40M', '36.3 Mbits/sec', '41.9 Mbits/sec']
+
+Average UDP Bandwidth over 10 runs: 37.03 Mbits/sec
+
+Running iperfudp test 1/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['50M', '40.6 Mbits/sec', '52.4 Mbits/sec']
+['50M', '40.6 Mbits/sec', '52.4 Mbits/sec']
+Running iperfudp test 2/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['50M', '39.0 Mbits/sec', '52.4 Mbits/sec']
+['50M', '39.0 Mbits/sec', '52.4 Mbits/sec']
+Running iperfudp test 3/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['50M', '42.8 Mbits/sec', '52.4 Mbits/sec']
+['50M', '42.8 Mbits/sec', '52.4 Mbits/sec']
+Running iperfudp test 4/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['50M', '41.4 Mbits/sec', '52.4 Mbits/sec']
+['50M', '41.4 Mbits/sec', '52.4 Mbits/sec']
+Running iperfudp test 5/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['50M', '41.6 Mbits/sec', '52.4 Mbits/sec']
+['50M', '41.6 Mbits/sec', '52.4 Mbits/sec']
+Running iperfudp test 6/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['50M', '41.0 Mbits/sec', '52.4 Mbits/sec']
+['50M', '41.0 Mbits/sec', '52.4 Mbits/sec']
+Running iperfudp test 7/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['50M', '42.7 Mbits/sec', '52.4 Mbits/sec']
+['50M', '42.7 Mbits/sec', '52.4 Mbits/sec']
+Running iperfudp test 8/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['50M', '43.5 Mbits/sec', '52.4 Mbits/sec']
+['50M', '43.5 Mbits/sec', '52.4 Mbits/sec']
+Running iperfudp test 9/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['50M', '39.8 Mbits/sec', '52.4 Mbits/sec']
+['50M', '39.8 Mbits/sec', '52.4 Mbits/sec']
+Running iperfudp test 10/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['50M', '43.3 Mbits/sec', '52.4 Mbits/sec']
+['50M', '43.3 Mbits/sec', '52.4 Mbits/sec']
+
+Average UDP Bandwidth over 10 runs: 41.57 Mbits/sec
+
+
+Running iperfudp test 1/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['60M', '38.2 Mbits/sec', '62.9 Mbits/sec']
+['60M', '38.2 Mbits/sec', '62.9 Mbits/sec']
+Running iperfudp test 2/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['60M', '39.2 Mbits/sec', '62.9 Mbits/sec']
+['60M', '39.2 Mbits/sec', '62.9 Mbits/sec']
+Running iperfudp test 3/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['60M', '38.8 Mbits/sec', '62.9 Mbits/sec']
+['60M', '38.8 Mbits/sec', '62.9 Mbits/sec']
+Running iperfudp test 4/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['60M', '38.3 Mbits/sec', '62.9 Mbits/sec']
+['60M', '38.3 Mbits/sec', '62.9 Mbits/sec']
+Running iperfudp test 5/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['60M', '40.9 Mbits/sec', '62.9 Mbits/sec']
+['60M', '40.9 Mbits/sec', '62.9 Mbits/sec']
+Running iperfudp test 6/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['60M', '40.9 Mbits/sec', '62.9 Mbits/sec']
+['60M', '40.9 Mbits/sec', '62.9 Mbits/sec']
+Running iperfudp test 7/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['60M', '42.5 Mbits/sec', '62.9 Mbits/sec']
+['60M', '42.5 Mbits/sec', '62.9 Mbits/sec']
+Running iperfudp test 8/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['60M', '42.1 Mbits/sec', '62.9 Mbits/sec']
+['60M', '42.1 Mbits/sec', '62.9 Mbits/sec']
+Running iperfudp test 9/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['60M', '41.3 Mbits/sec', '62.9 Mbits/sec']
+['60M', '41.3 Mbits/sec', '62.9 Mbits/sec']
+Running iperfudp test 10/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['60M', '42.8 Mbits/sec', '62.9 Mbits/sec']
+['60M', '42.8 Mbits/sec', '62.9 Mbits/sec']
+
+Average UDP Bandwidth over 10 runs: 40.50 Mbits/sec
+
+Running iperfudp test 1/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['70M', '43.0 Mbits/sec', '73.4 Mbits/sec']
+['70M', '43.0 Mbits/sec', '73.4 Mbits/sec']
+Running iperfudp test 2/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['70M', '44.3 Mbits/sec', '73.4 Mbits/sec']
+['70M', '44.3 Mbits/sec', '73.4 Mbits/sec']
+Running iperfudp test 3/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['70M', '44.6 Mbits/sec', '73.4 Mbits/sec']
+['70M', '44.6 Mbits/sec', '73.4 Mbits/sec']
+Running iperfudp test 4/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['70M', '23.9 Mbits/sec', '73.4 Mbits/sec']
+['70M', '23.9 Mbits/sec', '73.4 Mbits/sec']
+Running iperfudp test 5/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['70M', '41.3 Mbits/sec', '73.4 Mbits/sec']
+['70M', '41.3 Mbits/sec', '73.4 Mbits/sec']
+Running iperfudp test 6/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['70M', '40.4 Mbits/sec', '73.4 Mbits/sec']
+['70M', '40.4 Mbits/sec', '73.4 Mbits/sec']
+Running iperfudp test 7/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['70M', '41.5 Mbits/sec', '73.4 Mbits/sec']
+['70M', '41.5 Mbits/sec', '73.4 Mbits/sec']
+Running iperfudp test 8/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['70M', '42.4 Mbits/sec', '73.4 Mbits/sec']
+['70M', '42.4 Mbits/sec', '73.4 Mbits/sec']
+Running iperfudp test 9/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['70M', '44.5 Mbits/sec', '73.4 Mbits/sec']
+['70M', '44.5 Mbits/sec', '73.4 Mbits/sec']
+Running iperfudp test 10/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['70M', '42.8 Mbits/sec', '73.4 Mbits/sec']
+['70M', '42.8 Mbits/sec', '73.4 Mbits/sec']
+
+Average UDP Bandwidth over 10 runs: 40.87 Mbits/sec
+
+Running iperfudp test 1/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['80M', '39.9 Mbits/sec', '83.9 Mbits/sec']
+['80M', '39.9 Mbits/sec', '83.9 Mbits/sec']
+Running iperfudp test 2/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['80M', '45.0 Mbits/sec', '83.9 Mbits/sec']
+['80M', '45.0 Mbits/sec', '83.9 Mbits/sec']
+Running iperfudp test 3/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['80M', '43.2 Mbits/sec', '83.9 Mbits/sec']
+['80M', '43.2 Mbits/sec', '83.9 Mbits/sec']
+Running iperfudp test 4/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['80M', '42.0 Mbits/sec', '83.9 Mbits/sec']
+['80M', '42.0 Mbits/sec', '83.9 Mbits/sec']
+Running iperfudp test 5/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['80M', '43.2 Mbits/sec', '83.9 Mbits/sec']
+['80M', '43.2 Mbits/sec', '83.9 Mbits/sec']
+Running iperfudp test 6/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['80M', '44.4 Mbits/sec', '83.9 Mbits/sec']
+['80M', '44.4 Mbits/sec', '83.9 Mbits/sec']
+Running iperfudp test 7/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['80M', '44.3 Mbits/sec', '83.9 Mbits/sec']
+['80M', '44.3 Mbits/sec', '83.9 Mbits/sec']
+Running iperfudp test 8/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['80M', '42.2 Mbits/sec', '83.9 Mbits/sec']
+['80M', '42.2 Mbits/sec', '83.9 Mbits/sec']
+Running iperfudp test 9/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['80M', '42.7 Mbits/sec', '83.8 Mbits/sec']
+['80M', '42.7 Mbits/sec', '83.8 Mbits/sec']
+Running iperfudp test 10/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['80M', '42.6 Mbits/sec', '83.9 Mbits/sec']
+['80M', '42.6 Mbits/sec', '83.9 Mbits/sec']
+
+Average UDP Bandwidth over 10 runs: 42.95 Mbits/sec
+
+Running iperfudp test 1/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['90M', '41.4 Mbits/sec', '94.4 Mbits/sec']
+['90M', '41.4 Mbits/sec', '94.4 Mbits/sec']
+Running iperfudp test 2/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['90M', '43.4 Mbits/sec', '94.3 Mbits/sec']
+['90M', '43.4 Mbits/sec', '94.3 Mbits/sec']
+Running iperfudp test 3/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['90M', '43.7 Mbits/sec', '94.4 Mbits/sec']
+['90M', '43.7 Mbits/sec', '94.4 Mbits/sec']
+Running iperfudp test 4/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['90M', '38.4 Mbits/sec', '94.4 Mbits/sec']
+['90M', '38.4 Mbits/sec', '94.4 Mbits/sec']
+Running iperfudp test 5/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['90M', '40.2 Mbits/sec', '94.4 Mbits/sec']
+['90M', '40.2 Mbits/sec', '94.4 Mbits/sec']
+Running iperfudp test 6/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['90M', '42.6 Mbits/sec', '94.4 Mbits/sec']
+['90M', '42.6 Mbits/sec', '94.4 Mbits/sec']
+Running iperfudp test 7/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['90M', '43.0 Mbits/sec', '94.4 Mbits/sec']
+['90M', '43.0 Mbits/sec', '94.4 Mbits/sec']
+Running iperfudp test 8/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['90M', '43.4 Mbits/sec', '94.4 Mbits/sec']
+['90M', '43.4 Mbits/sec', '94.4 Mbits/sec']
+Running iperfudp test 9/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['90M', '43.1 Mbits/sec', '94.4 Mbits/sec']
+['90M', '43.1 Mbits/sec', '94.4 Mbits/sec']
+Running iperfudp test 10/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['90M', '43.1 Mbits/sec', '94.4 Mbits/sec']
+['90M', '43.1 Mbits/sec', '94.4 Mbits/sec']
+
+Average UDP Bandwidth over 10 runs: 42.23 Mbits/sec
+
+Running iperfudp test 1/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['100M', '39.2 Mbits/sec', '104.9 Mbits/sec']
+['100M', '39.2 Mbits/sec', '104.9 Mbits/sec']
+Running iperfudp test 2/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['100M', '43.9 Mbits/sec', '104.9 Mbits/sec']
+['100M', '43.9 Mbits/sec', '104.9 Mbits/sec']
+Running iperfudp test 3/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['100M', '41.9 Mbits/sec', '104.9 Mbits/sec']
+['100M', '41.9 Mbits/sec', '104.9 Mbits/sec']
+Running iperfudp test 4/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['100M', '43.5 Mbits/sec', '104.8 Mbits/sec']
+['100M', '43.5 Mbits/sec', '104.8 Mbits/sec']
+Running iperfudp test 5/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['100M', '41.9 Mbits/sec', '104.9 Mbits/sec']
+['100M', '41.9 Mbits/sec', '104.9 Mbits/sec']
+Running iperfudp test 6/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['100M', '43.1 Mbits/sec', '104.9 Mbits/sec']
+['100M', '43.1 Mbits/sec', '104.9 Mbits/sec']
+Running iperfudp test 7/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['100M', '43.1 Mbits/sec', '104.9 Mbits/sec']
+['100M', '43.1 Mbits/sec', '104.9 Mbits/sec']
+Running iperfudp test 8/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['100M', '42.8 Mbits/sec', '104.9 Mbits/sec']
+['100M', '42.8 Mbits/sec', '104.9 Mbits/sec']
+Running iperfudp test 9/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['100M', '44.1 Mbits/sec', '104.9 Mbits/sec']
+['100M', '44.1 Mbits/sec', '104.9 Mbits/sec']
+Running iperfudp test 10/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['100M', '43.6 Mbits/sec', '104.9 Mbits/sec']
+['100M', '43.6 Mbits/sec', '104.9 Mbits/sec']
+
+Average UDP Bandwidth over 10 runs: 42.71 Mbits/sec
+
+Running iperfudp test 1/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1000M', '33.7 Mbits/sec', '927.7 Mbits/sec']
+['1000M', '33.7 Mbits/sec', '927.7 Mbits/sec']
+Running iperfudp test 2/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1000M', '36.9 Mbits/sec', '1.0 Gbits/sec']
+['1000M', '36.9 Mbits/sec', '1.0 Gbits/sec']
+Running iperfudp test 3/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1000M', '35.4 Mbits/sec', '1.0 Gbits/sec']
+['1000M', '35.4 Mbits/sec', '1.0 Gbits/sec']
+Running iperfudp test 4/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1000M', '43.3 Mbits/sec', '1.0 Gbits/sec']
+['1000M', '43.3 Mbits/sec', '1.0 Gbits/sec']
+Running iperfudp test 5/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1000M', '41.9 Mbits/sec', '1.0 Gbits/sec']
+['1000M', '41.9 Mbits/sec', '1.0 Gbits/sec']
+Running iperfudp test 6/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1000M', '40.9 Mbits/sec', '1.0 Gbits/sec']
+['1000M', '40.9 Mbits/sec', '1.0 Gbits/sec']
+Running iperfudp test 7/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1000M', '41.5 Mbits/sec', '1.0 Gbits/sec']
+['1000M', '41.5 Mbits/sec', '1.0 Gbits/sec']
+Running iperfudp test 8/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1000M', '40.8 Mbits/sec', '1.0 Gbits/sec']
+['1000M', '40.8 Mbits/sec', '1.0 Gbits/sec']
+Running iperfudp test 9/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1000M', '42.2 Mbits/sec', '1.0 Gbits/sec']
+['1000M', '42.2 Mbits/sec', '1.0 Gbits/sec']
+Running iperfudp test 10/10...
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['1000M', '38.6 Mbits/sec', '1.0 Gbits/sec']
+['1000M', '38.6 Mbits/sec', '1.0 Gbits/sec']
+
+Average UDP Bandwidth over 10 runs: 39.52 Mbits/sec

@@ -1,0 +1,483 @@
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.881s)
+*** Congestion bottleneck: 1 Mbps, packet size: 1000 Bytes, switch bottleneck: 125 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+*** P4Simulator mode
+*** Installing P4 bridge [ 0 ]device with configuration: 
+P4JsonPath = /home/p4/workdir/ns3.35/contrib/p4sim/test/basic/basic.json, 
+FlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt, 
+ViewFlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt
+Running simulation...
+Simulate Running time: 293ms
+Total Running time: 5401ms
+Run successfully!
+client_start_time: 3.08client_stop_time: 5.992sink_start_time: 3.12001sink_stop_time: 6.01601
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 374000 bytes in time 2.912
+Total Received Bytes: 372000 bytes in time 2.896
+Final Transmitted Throughput: 1.02747 Mbps
+Final Received Throughput: 1.02762 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.768s)
+*** Congestion bottleneck: 10 Mbps, packet size: 1000 Bytes, switch bottleneck: 1250 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+*** P4Simulator mode
+*** Installing P4 bridge [ 0 ]device with configuration: 
+P4JsonPath = /home/p4/workdir/ns3.35/contrib/p4sim/test/basic/basic.json, 
+FlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt, 
+ViewFlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt
+Running simulation...
+Simulate Running time: 1996ms
+Total Running time: 7228ms
+Run successfully!
+client_start_time: 3.008client_stop_time: 5.9992sink_start_time: 3.01761sink_stop_time: 6.00161
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 3749000 bytes in time 2.9912
+Total Received Bytes: 3740000 bytes in time 2.984
+Final Transmitted Throughput: 10.0267 Mbps
+Final Received Throughput: 10.0268 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.655s)
+*** Congestion bottleneck: 20 Mbps, packet size: 1000 Bytes, switch bottleneck: 2500 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+*** P4Simulator mode
+*** Installing P4 bridge [ 0 ]device with configuration: 
+P4JsonPath = /home/p4/workdir/ns3.35/contrib/p4sim/test/basic/basic.json, 
+FlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt, 
+ViewFlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt
+Running simulation...
+Simulate Running time: 3393ms
+Total Running time: 8518ms
+Run successfully!
+client_start_time: 3.004client_stop_time: 5.9996sink_start_time: 3.01201sink_stop_time: 6.00081
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 7499000 bytes in time 2.9956
+Total Received Bytes: 7482000 bytes in time 2.9888
+Final Transmitted Throughput: 20.0267 Mbps
+Final Received Throughput: 20.0268 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.771s)
+*** Congestion bottleneck: 30 Mbps, packet size: 1000 Bytes, switch bottleneck: 3750 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+*** P4Simulator mode
+*** Installing P4 bridge [ 0 ]device with configuration: 
+P4JsonPath = /home/p4/workdir/ns3.35/contrib/p4sim/test/basic/basic.json, 
+FlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt, 
+ViewFlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt
+Running simulation...
+Simulate Running time: 5274ms
+Total Running time: 11710ms
+Run successfully!
+client_start_time: 3.00267client_stop_time: 5.99974sink_start_time: 3.00987sink_stop_time: 6.00079
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 11249000 bytes in time 2.99707
+Total Received Bytes: 11226000 bytes in time 2.99093
+Final Transmitted Throughput: 30.0267 Mbps
+Final Received Throughput: 30.0268 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.668s)
+*** Congestion bottleneck: 40 Mbps, packet size: 1000 Bytes, switch bottleneck: 5000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+*** P4Simulator mode
+*** Installing P4 bridge [ 0 ]device with configuration: 
+P4JsonPath = /home/p4/workdir/ns3.35/contrib/p4sim/test/basic/basic.json, 
+FlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt, 
+ViewFlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt
+Running simulation...
+Simulate Running time: 6870ms
+Total Running time: 12124ms
+Run successfully!
+client_start_time: 3.002client_stop_time: 5.9998sink_start_time: 3.00901sink_stop_time: 6.00041
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 14999000 bytes in time 2.9978
+Total Received Bytes: 14967000 bytes in time 2.9914
+Final Transmitted Throughput: 40.0267 Mbps
+Final Received Throughput: 40.0267 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.701s)
+*** Congestion bottleneck: 50 Mbps, packet size: 1000 Bytes, switch bottleneck: 6250 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+*** P4Simulator mode
+*** Installing P4 bridge [ 0 ]device with configuration: 
+P4JsonPath = /home/p4/workdir/ns3.35/contrib/p4sim/test/basic/basic.json, 
+FlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt, 
+ViewFlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt
+Running simulation...
+Simulate Running time: 8665ms
+Total Running time: 15211ms
+Run successfully!
+client_start_time: 3.0016client_stop_time: 5.99984sink_start_time: 3.00833sink_stop_time: 6.00033
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 18749000 bytes in time 2.99824
+Total Received Bytes: 18710000 bytes in time 2.992
+Final Transmitted Throughput: 50.0267 Mbps
+Final Received Throughput: 50.0267 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.694s)
+*** Congestion bottleneck: 60 Mbps, packet size: 1000 Bytes, switch bottleneck: 7500 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+*** P4Simulator mode
+*** Installing P4 bridge [ 0 ]device with configuration: 
+P4JsonPath = /home/p4/workdir/ns3.35/contrib/p4sim/test/basic/basic.json, 
+FlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt, 
+ViewFlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt
+Running simulation...
+Simulate Running time: 10219ms
+Total Running time: 15332ms
+Run successfully!
+client_start_time: 3.00133client_stop_time: 5.99999sink_start_time: 3.008sink_stop_time: 6.00053
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 22500000 bytes in time 2.99866
+Total Received Bytes: 22454000 bytes in time 2.99253
+Final Transmitted Throughput: 60.0268 Mbps
+Final Received Throughput: 60.0269 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.655s)
+*** Congestion bottleneck: 70 Mbps, packet size: 1000 Bytes, switch bottleneck: 8750 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+*** P4Simulator mode
+*** Installing P4 bridge [ 0 ]device with configuration: 
+P4JsonPath = /home/p4/workdir/ns3.35/contrib/p4sim/test/basic/basic.json, 
+FlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt, 
+ViewFlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt
+Running simulation...
+Simulate Running time: 12549ms
+Total Running time: 17881ms
+Run successfully!
+client_start_time: 3.00114client_stop_time: 5.99989sink_start_time: 3.00765sink_stop_time: 6.00031
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 26249000 bytes in time 2.99875
+Total Received Bytes: 26196000 bytes in time 2.99267
+Final Transmitted Throughput: 70.0265 Mbps
+Final Received Throughput: 70.0272 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.659s)
+*** Congestion bottleneck: 80 Mbps, packet size: 1000 Bytes, switch bottleneck: 10000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+*** P4Simulator mode
+*** Installing P4 bridge [ 0 ]device with configuration: 
+P4JsonPath = /home/p4/workdir/ns3.35/contrib/p4sim/test/basic/basic.json, 
+FlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt, 
+ViewFlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt
+Running simulation...
+Simulate Running time: 13857ms
+Total Running time: 19430ms
+Run successfully!
+client_start_time: 3.001client_stop_time: 5.9999sink_start_time: 3.00751sink_stop_time: 6.00021
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 29999000 bytes in time 2.9989
+Total Received Bytes: 29937000 bytes in time 2.9927
+Final Transmitted Throughput: 80.0267 Mbps
+Final Received Throughput: 80.0267 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.732s)
+*** Congestion bottleneck: 90 Mbps, packet size: 1000 Bytes, switch bottleneck: 11250 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+*** P4Simulator mode
+*** Installing P4 bridge [ 0 ]device with configuration: 
+P4JsonPath = /home/p4/workdir/ns3.35/contrib/p4sim/test/basic/basic.json, 
+FlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt, 
+ViewFlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt
+Running simulation...
+Simulate Running time: 15569ms
+Total Running time: 21006ms
+Run successfully!
+client_start_time: 3.00089client_stop_time: 5.99991sink_start_time: 3.00727sink_stop_time: 6.00022
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 33749000 bytes in time 2.99903
+Total Received Bytes: 33681000 bytes in time 2.99295
+Final Transmitted Throughput: 90.0266 Mbps
+Final Received Throughput: 90.0276 Mbps
+======================================
+
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.707s)
+*** Congestion bottleneck: 100 Mbps, packet size: 1000 Bytes, switch bottleneck: 12500 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+*** P4Simulator mode
+*** Installing P4 bridge [ 0 ]device with configuration: 
+P4JsonPath = /home/p4/workdir/ns3.35/contrib/p4sim/test/basic/basic.json, 
+FlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt, 
+ViewFlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt
+Running simulation...
+Simulate Running time: 16818ms
+Total Running time: 22201ms
+Run successfully!
+client_start_time: 3.0008client_stop_time: 5.99992sink_start_time: 3.00721sink_stop_time: 6.00017
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 37499000 bytes in time 2.99912
+Total Received Bytes: 37422000 bytes in time 2.99296
+Final Transmitted Throughput: 100.027 Mbps
+Final Received Throughput: 100.027 Mbps
+======================================
+
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.711s)
+*** Congestion bottleneck: 1000 Mbps, packet size: 1000 Bytes, switch bottleneck: 125000 pps
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+*** P4Simulator mode
+*** Installing P4 bridge [ 0 ]device with configuration: 
+P4JsonPath = /home/p4/workdir/ns3.35/contrib/p4sim/test/basic/basic.json, 
+FlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt, 
+ViewFlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt
+Running simulation...
+Simulate Running time: 184657ms
+Total Running time: 189805ms
+Run successfully!
+client_start_time: 3.00008client_stop_time: 5.99999sink_start_time: 3.00614sink_stop_time: 6.08742
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 374999000 bytes in time 2.99991
+Total Received Bytes: 364055000 bytes in time 3.08128
+Final Transmitted Throughput: 1000.03 Mbps
+Final Received Throughput: 945.205 Mbps
+======================================
+
+(p4dev-python-venv) p4@p4:~/workdir/ns3.35$ ./waf --run "p4-ipv4-forwarding-test --pcap=false --appDataRate=10000Mbps --congestion_bottleneck=10000"
+/home/p4/workdir/ns3.35/bindings/python/wscript:321: SyntaxWarning: invalid escape sequence '\d'
+  m = re.match( "^castxml version (\d\.\d)(-)?(\w+)?", castxml_version_line)
+Waf: Entering directory `/home/p4/workdir/ns3.35/build'
+[2729/2941] Compiling contrib/p4sim/examples/p4-ipv4-forwarding-test.cc
+[2901/2941] Linking build/contrib/p4sim/examples/ns3.35-p4-ipv4-forwarding-test-debug
+Waf: Leaving directory `/home/p4/workdir/ns3.35/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (10.084s)
+*** Congestion bottleneck: 10000 Mbps, packet size: 1000 pps, switch bottleneck: 1195028 ns
+*** Reading topology from file: /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/topo.txt with format: CsmaTopo
+*** Host number: 2, Switch number: 1
+*** Link from host 1 to  switch0 with data rate  and delay 
+*** Link from host 2 to  switch0 with data rate  and delay 
+host 0: connect with switch 0 port 0
+host 1: connect with switch 0 port 1
+switch 0 connect with: h0 h1 
+Node IP and MAC addresses:
+Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
+Node 0: IP = 0x0a010101, MAC = 0x000000000001
+Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
+Node 1: IP = 0x0a010102, MAC = 0x000000000003
+*** P4Simulator mode
+*** Installing P4 bridge [ 0 ]device with configuration: 
+P4JsonPath = /home/p4/workdir/ns3.35/contrib/p4sim/test/basic/basic.json, 
+FlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt, 
+ViewFlowTablePath = /home/p4/workdir/ns3.35/contrib/p4sim/test/test_simple/flowtable_0.txt
+Running simulation...
+Simulate Running time: 1742556ms
+Total Running time: 1747683ms
+Run successfully!
+client_start_time: 3.00001client_stop_time: 6sink_start_time: 3.00601sink_stop_time: 6.00005
+======================================
+Final Simulation Results:
+Total Transmitted Bytes: 3749999000 bytes in time 2.99999
+Total Received Bytes: 3577117000 bytes in time 2.99404
+Final Transmitted Throughput: 10000 Mbps
+Final Received Throughput: 9557.97 Mbps
