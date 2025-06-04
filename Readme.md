@@ -16,6 +16,22 @@ This artifact allows users to reproduce the simulation results presented in the 
 
 ## Repository Structure
 
+We will add all the tests for the `example` in p4sim, check dir `examples_test_result`:
+
+
+| Example Name     | Description                                      | Architecture     |
+|------------------|--------------------------------------------------|------------------|
+| basic_tunnel [1] | Tunnel with custom header                        | V1model          |
+| firewall [2]     | A basic stateful firewall                        | V1model          |
+| ipv4_forward     | Basic forwarding based on `ip_dst`               | V1model          |
+| load_balance [3] | Load balancing in spine-leaf network             | V1model          |
+| p4_basic [4]     | Basic forwarding based on `ip_dst`               | V1model          |
+| qos              | Forwarding with priority                         | V1model          |
+| simple_pna       | IPv4 forwarding with PNA architecture            | PNA              |
+| simple_psa       | IPv4 forwarding with PSA architecture            | PSA              |
+| simple_v1model   | IPv4 forwarding with V1model architecture        | V1model          |
+
+
 ```
 .
 ├── Readme.md
@@ -81,3 +97,4 @@ The `Evaluation` section of paper:
 
 
 
+PS: Some of the Documents is helped writed with DeepSeek.
