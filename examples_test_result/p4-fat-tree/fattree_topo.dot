@@ -1,0 +1,173 @@
+digraph FatTree_K6 {
+    rankdir=TB;
+    node [shape=box, style=filled, fontsize=10];
+
+    // ---------------- Core Layer ----------------
+    subgraph cluster_core {
+        label="Core Layer (9 switches)";
+        style=dashed;
+        color=blue;
+        Core0 [label="Core 0", fillcolor=lightgray];
+        Core1 [label="Core 1", fillcolor=lightgray];
+        Core2 [label="Core 2", fillcolor=lightgray];
+        Core3 [label="Core 3", fillcolor=lightgray];
+        Core4 [label="Core 4", fillcolor=lightgray];
+        Core5 [label="Core 5", fillcolor=lightgray];
+        Core6 [label="Core 6", fillcolor=lightgray];
+        Core7 [label="Core 7", fillcolor=lightgray];
+        Core8 [label="Core 8", fillcolor=lightgray];
+    }
+
+    // ---------------- 6 Pods ----------------
+    // Pod 0
+    subgraph cluster_pod0 {
+        label="Pod 0";
+        style=dotted;
+
+        Agg0_0 [label="Agg 0-0", fillcolor=lightblue];
+        Agg0_1 [label="Agg 0-1", fillcolor=lightblue];
+        Agg0_2 [label="Agg 0-2", fillcolor=lightblue];
+        Edge0_0 [label="Edge 0-0", fillcolor=lightgreen];
+        Edge0_1 [label="Edge 0-1", fillcolor=lightgreen];
+        Edge0_2 [label="Edge 0-2", fillcolor=lightgreen];
+
+        // Agg<->Edge 全连接
+        Agg0_0 -> Edge0_0;
+        Agg0_0 -> Edge0_1;
+        Agg0_0 -> Edge0_2;
+        Agg0_1 -> Edge0_0;
+        Agg0_1 -> Edge0_1;
+        Agg0_1 -> Edge0_2;
+        Agg0_2 -> Edge0_0;
+        Agg0_2 -> Edge0_1;
+        Agg0_2 -> Edge0_2;
+
+        // === 新增：Edge0_2 下的 3 台服务器 ===
+        Srv0_2_0 [label="Server 0-2-0", shape=ellipse, fillcolor=white];
+        Srv0_2_1 [label="Server 0-2-1", shape=ellipse, fillcolor=white];
+        Srv0_2_2 [label="Server 0-2-2", shape=ellipse, fillcolor=white];
+
+        Edge0_2 -> Srv0_2_0;
+        Edge0_2 -> Srv0_2_1;
+        Edge0_2 -> Srv0_2_2;
+    }
+
+    // 其他 Pod 保持原样
+    subgraph cluster_pod1 {
+        label="Pod 1";
+        style=dotted;
+        Agg1_0 [label="Agg 1-0", fillcolor=lightblue];
+        Agg1_1 [label="Agg 1-1", fillcolor=lightblue];
+        Agg1_2 [label="Agg 1-2", fillcolor=lightblue];
+        Edge1_0 [label="Edge 1-0", fillcolor=lightgreen];
+        Edge1_1 [label="Edge 1-1", fillcolor=lightgreen];
+        Edge1_2 [label="Edge 1-2", fillcolor=lightgreen];
+
+        Agg1_0 -> Edge1_0;
+        Agg1_0 -> Edge1_1;
+        Agg1_0 -> Edge1_2;
+        Agg1_1 -> Edge1_0;
+        Agg1_1 -> Edge1_1;
+        Agg1_1 -> Edge1_2;
+        Agg1_2 -> Edge1_0;
+        Agg1_2 -> Edge1_1;
+        Agg1_2 -> Edge1_2;
+    }
+
+    subgraph cluster_pod2 {
+        label="Pod 2";
+        style=dotted;
+        Agg2_0 [label="Agg 2-0", fillcolor=lightblue];
+        Agg2_1 [label="Agg 2-1", fillcolor=lightblue];
+        Agg2_2 [label="Agg 2-2", fillcolor=lightblue];
+        Edge2_0 [label="Edge 2-0", fillcolor=lightgreen];
+        Edge2_1 [label="Edge 2-1", fillcolor=lightgreen];
+        Edge2_2 [label="Edge 2-2", fillcolor=lightgreen];
+
+        Agg2_0 -> Edge2_0;
+        Agg2_0 -> Edge2_1;
+        Agg2_0 -> Edge2_2;
+        Agg2_1 -> Edge2_0;
+        Agg2_1 -> Edge2_1;
+        Agg2_1 -> Edge2_2;
+        Agg2_2 -> Edge2_0;
+        Agg2_2 -> Edge2_1;
+        Agg2_2 -> Edge2_2;
+    }
+
+    subgraph cluster_pod3 {
+        label="Pod 3";
+        style=dotted;
+        Agg3_0 [label="Agg 3-0", fillcolor=lightblue];
+        Agg3_1 [label="Agg 3-1", fillcolor=lightblue];
+        Agg3_2 [label="Agg 3-2", fillcolor=lightblue];
+        Edge3_0 [label="Edge 3-0", fillcolor=lightgreen];
+        Edge3_1 [label="Edge 3-1", fillcolor=lightgreen];
+        Edge3_2 [label="Edge 3-2", fillcolor=lightgreen];
+
+        Agg3_0 -> Edge3_0;
+        Agg3_0 -> Edge3_1;
+        Agg3_0 -> Edge3_2;
+        Agg3_1 -> Edge3_0;
+        Agg3_1 -> Edge3_1;
+        Agg3_1 -> Edge3_2;
+        Agg3_2 -> Edge3_0;
+        Agg3_2 -> Edge3_1;
+        Agg3_2 -> Edge3_2;
+    }
+
+    subgraph cluster_pod4 {
+        label="Pod 4";
+        style=dotted;
+        Agg4_0 [label="Agg 4-0", fillcolor=lightblue];
+        Agg4_1 [label="Agg 4-1", fillcolor=lightblue];
+        Agg4_2 [label="Agg 4-2", fillcolor=lightblue];
+        Edge4_0 [label="Edge 4-0", fillcolor=lightgreen];
+        Edge4_1 [label="Edge 4-1", fillcolor=lightgreen];
+        Edge4_2 [label="Edge 4-2", fillcolor=lightgreen];
+
+        Agg4_0 -> Edge4_0;
+        Agg4_0 -> Edge4_1;
+        Agg4_0 -> Edge4_2;
+        Agg4_1 -> Edge4_0;
+        Agg4_1 -> Edge4_1;
+        Agg4_1 -> Edge4_2;
+        Agg4_2 -> Edge4_0;
+        Agg4_2 -> Edge4_1;
+        Agg4_2 -> Edge4_2;
+    }
+
+    subgraph cluster_pod5 {
+        label="Pod 5";
+        style=dotted;
+        Agg5_0 [label="Agg 5-0", fillcolor=lightblue];
+        Agg5_1 [label="Agg 5-1", fillcolor=lightblue];
+        Agg5_2 [label="Agg 5-2", fillcolor=lightblue];
+        Edge5_0 [label="Edge 5-0", fillcolor=lightgreen];
+        Edge5_1 [label="Edge 5-1", fillcolor=lightgreen];
+        Edge5_2 [label="Edge 5-2", fillcolor=lightgreen];
+
+        Agg5_0 -> Edge5_0;
+        Agg5_0 -> Edge5_1;
+        Agg5_0 -> Edge5_2;
+        Agg5_1 -> Edge5_0;
+        Agg5_1 -> Edge5_1;
+        Agg5_1 -> Edge5_2;
+        Agg5_2 -> Edge5_0;
+        Agg5_2 -> Edge5_1;
+        Agg5_2 -> Edge5_2;
+    }
+
+    // ---------------- Core <-> Aggregation Connections ----------------
+    Core0 -> Agg0_0; Core0 -> Agg1_0; Core0 -> Agg2_0; Core0 -> Agg3_0; Core0 -> Agg4_0; Core0 -> Agg5_0;
+    Core1 -> Agg0_1; Core1 -> Agg1_1; Core1 -> Agg2_1; Core1 -> Agg3_1; Core1 -> Agg4_1; Core1 -> Agg5_1;
+    Core2 -> Agg0_2; Core2 -> Agg1_2; Core2 -> Agg2_2; Core2 -> Agg3_2; Core2 -> Agg4_2; Core2 -> Agg5_2;
+
+    Core3 -> Agg0_0; Core3 -> Agg1_0; Core3 -> Agg2_0; Core3 -> Agg3_0; Core3 -> Agg4_0; Core3 -> Agg5_0;
+    Core4 -> Agg0_1; Core4 -> Agg1_1; Core4 -> Agg2_1; Core4 -> Agg3_1; Core4 -> Agg4_1; Core4 -> Agg5_1;
+    Core5 -> Agg0_2; Core5 -> Agg1_2; Core5 -> Agg2_2; Core5 -> Agg3_2; Core5 -> Agg4_2; Core5 -> Agg5_2;
+
+    Core6 -> Agg0_0; Core6 -> Agg1_0; Core6 -> Agg2_0; Core6 -> Agg3_0; Core6 -> Agg4_0; Core6 -> Agg5_0;
+    Core7 -> Agg0_1; Core7 -> Agg1_1; Core7 -> Agg2_1; Core7 -> Agg3_1; Core7 -> Agg4_1; Core7 -> Agg5_1;
+    Core8 -> Agg0_2; Core8 -> Agg1_2; Core8 -> Agg2_2; Core8 -> Agg3_2; Core8 -> Agg4_2; Core8 -> Agg5_2;
+}

@@ -5,7 +5,7 @@ This repository contains the artifact for the paper:
 **"P4sim: Simulating programmable switches in ns-3"**  
 Accepted at the *2025 International Conference on ns-3 (ICNS3)*.  
 
-![Large-Scale Network simulation with P4 switch](./examples_test_result/p4-fat-tree/Fattree_topo.png)
+![Large-Scale Network simulation with P4 switch (Fat-tree K=6)](./examples_test_result/p4-fat-tree/Fattree_topo.svg)
 
 
 ## Overview
