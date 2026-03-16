@@ -1,204 +1,157 @@
-# How to test and get the result
+# Tutorial: Spine-Leaf Load Balancing
 
-## The paper result
+This example simulates ECMP (Equal-Cost Multi-Path) load balancing across a spine-leaf data center topology. It corresponds to **Section 5.2** of the paper and produces the data for **Figure 7**.
 
-Run `./ns3 run p4-spine-leaf-topo` with script [`p4sim/examples/p4-spine-leaf-topo.cc`](https://github.com/HapCommSys/p4sim/blob/main/examples/p4-spine-leaf-topo.cc) will get the result.
+---
 
-## The parameter we use for quick test
+## Topology
 
-```bash
-# Here we use 100 UDP flows each 1Mbps as a quick test
-# Change that in scripts:
-
-double client_stop_time = client_start_time + 10; // Total 10s
-std::string appDataRate = "1Mbps"; // Default application data rate
-
-p4SwitchHelper.SetDeviceAttribute("SwitchRate", UintegerValue(13000)); // Switch processing rate should always >= pps need for simulation
-
-uint16_t servPortStart = 9900; // UDP port 9900 to 10000 total 10 flows
-uint16_t servPortEnd = 10000;
+```
+         [Spine 4]         [Spine 5]       ← Two equal-cost spine switches
+           /    \           /    \
+     [Leaf 2]──────────────[Leaf 3]         ← Aggregation/leaf switches
+       / | \                 / | \
+   [h0][h1][h2]         [h3][h4][h5]        ← End hosts
 ```
 
-The results will be like:
+**6 hosts, 6 P4 switches** (2 leaf + 2 spine + 2 aggregation = 6 total)
+
+**Link capacities:**
+- Host ↔ Leaf: 10 Gbps, 1 ms delay
+- Leaf ↔ Spine / Spine ↔ Leaf: 40 Gbps, 0.5 ms delay
+
+---
+
+## Scripts
+
+| File | Description |
+|------|-------------|
+| [`p4-spine-leaf-topo.cc`](https://github.com/HapCommSys/p4sim/blob/main/examples/p4-spine-leaf-topo.cc) | ns-3 simulation script |
+| [`load_balance.p4`](https://github.com/HapCommSys/p4sim/tree/main/examples/p4src/load_balance) | P4 load balancing program |
+| `flowtable_0.txt` – `flowtable_5.txt` | Per-switch flow table entries |
+
+---
+
+## How to Run
 
 ```bash
-(p4dev-python-venv) p4@p4:~/workdir/ns-3-dev-git$ ./ns3 run p4-spine-leaf-topo 
-[  0%] Building CXX object contrib/p4sim/examples/CMakeFiles/p4-spine-leaf-topo.dir/p4-spine-leaf-topo.cc.o
-[  0%] Linking CXX executable ns3.39-p4-spine-leaf-topo-debug
-*** Reading topology from file: /home/p4/workdir/ns-3-dev-git/contrib/p4sim/examples/p4src/load_balance/topo.txt with format: P2PTopo
+./ns3 run p4-spine-leaf-topo
+```
+
+### Key parameters (edit in the script)
+
+```cpp
+double client_stop_time = client_start_time + 10;   // 10-second simulation
+std::string appDataRate = "1Mbps";                  // Per-flow rate (100 flows × 1 Mbps = 100 Mbps total)
+
+// Switch processing rate — must be >= total pps required
+p4SwitchHelper.SetDeviceAttribute("SwitchRate", UintegerValue(13000));
+
+uint16_t servPortStart = 9900;   // 100 UDP flows on ports 9900–10000
+uint16_t servPortEnd   = 10000;
+```
+
+> PCAP files are not captured in this test because 100 flows × 10 seconds would produce very large files.
+
+---
+
+## Reading the Output
+
+The simulation prints per-second throughput at four key monitoring points:
+
+```
+Time: 5s | Throughput (Mbps) - Switch0(Rx): 56.67, Switch2(Rx): 28.89, Switch3(Rx): 27.76, Switch5(Tx): 56.67
+```
+
+| Column | Meaning |
+|--------|---------|
+| `Switch0(Rx)` | Total traffic entering the destination leaf switch |
+| `Switch2(Rx)` | Traffic routed via Spine 4 (Path A) |
+| `Switch3(Rx)` | Traffic routed via Spine 5 (Path B) |
+| `Switch5(Tx)` | Total traffic leaving the source leaf switch |
+
+**Load balance check:** `Switch2(Rx) ≈ Switch3(Rx) ≈ Switch0(Rx) / 2`
+
+In the captured output above (t=5s): Path A = 28.89 Mbps, Path B = 27.76 Mbps → ratio ≈ 1.04, which is near-perfect 50/50 split.
+
+---
+
+## Analyzing Load Balance Ratio
+
+```bash
+cd raw_result/load_balance
+python3 ../../plot/read_and_compute_ratio.py
+```
+
+This reads `traffic_data.txt` and prints the Path A / Path B ratio for each time step, then the overall average. A ratio close to 1.0 indicates balanced load distribution.
+
+---
+
+## Generating Figure 7
+
+```bash
+cd raw_result/load_balance
+python3 ../../plot/throughput_lb.py
+# Output: load_balancing.pdf
+```
+
+The figure shows:
+- Total input and received traffic as line plots
+- Per-path (Path A and Path B) traffic as a stacked bar chart
+- A dashed reference line at 50% of input (ideal equal split)
+
+---
+
+## Full Captured Console Output
+
+<details>
+<summary>Click to expand full simulation output</summary>
+
+```bash
+(p4dev-python-venv) p4@p4:~/workdir/ns-3-dev-git$ ./ns3 run p4-spine-leaf-topo
+*** Reading topology from file: .../load_balance/topo.txt with format: P2PTopo
 *** Host number: 6, Switch number: 6
-DataRate: 10Gbps
-Delay: 1ms
-*** Link from host 6 to  switch0 with data rate 10Gbps and delay 1ms
-DataRate: 10Gbps
-Delay: 1ms
-*** Link from host 7 to  switch0 with data rate 10Gbps and delay 1ms
-DataRate: 10Gbps
-Delay: 1ms
-*** Link from host 8 to  switch0 with data rate 10Gbps and delay 1ms
-DataRate: 10Gbps
-Delay: 1ms
-*** Link from host 9 to  switch1 with data rate 10Gbps and delay 1ms
-DataRate: 10Gbps
-Delay: 1ms
-*** Link from host 10 to  switch1 with data rate 10Gbps and delay 1ms
-DataRate: 10Gbps
-Delay: 1ms
-*** Link from host 11 to  switch1 with data rate 10Gbps and delay 1ms
-DataRate: 40Gbps
-Delay: 0.5ms
-*** Link from  switch 0 to  switch 2 with data rate 40Gbps and delay 0.5ms
-DataRate: 40Gbps
-Delay: 0.5ms
-*** Link from  switch 2 to  switch 4 with data rate 40Gbps and delay 0.5ms
-DataRate: 40Gbps
-Delay: 0.5ms
-*** Link from  switch 2 to  switch 5 with data rate 40Gbps and delay 0.5ms
-DataRate: 40Gbps
-Delay: 0.5ms
-*** Link from  switch 2 to  switch 1 with data rate 40Gbps and delay 0.5ms
-DataRate: 40Gbps
-Delay: 0.5ms
-*** Link from  switch 0 to  switch 3 with data rate 40Gbps and delay 0.5ms
-DataRate: 40Gbps
-Delay: 0.5ms
-*** Link from  switch 4 to  switch 3 with data rate 40Gbps and delay 0.5ms
-DataRate: 40Gbps
-Delay: 0.5ms
-*** Link from  switch 5 to  switch 3 with data rate 40Gbps and delay 0.5ms
-DataRate: 40Gbps
-Delay: 0.5ms
-*** Link from  switch 1 to  switch 3 with data rate 40Gbps and delay 0.5ms
 
-=========== Switch Port Connection Details ===========
 Switch 0 (Node ID: 1) has 5 ports:
-  - Port 0 (Device ID: 0) connected to h0
-  - Port 1 (Device ID: 1) connected to h1
-  - Port 2 (Device ID: 2) connected to h2
-  - Port 3 (Device ID: 3) connected to s2_0
-  - Port 4 (Device ID: 4) connected to s3_0
+  - Port 0 connected to h0
+  - Port 1 connected to h1
+  - Port 2 connected to h2
+  - Port 3 connected to s2_0
+  - Port 4 connected to s3_0
 Switch 1 (Node ID: 5) has 5 ports:
-  - Port 0 (Device ID: 0) connected to h3
-  - Port 1 (Device ID: 1) connected to h4
-  - Port 2 (Device ID: 2) connected to h5
-  - Port 3 (Device ID: 3) connected to s2_3
-  - Port 4 (Device ID: 4) connected to s3_3
-Switch 2 (Node ID: 8) has 4 ports:
-  - Port 0 (Device ID: 0) connected to s0_3
-  - Port 1 (Device ID: 1) connected to s4_0
-  - Port 2 (Device ID: 2) connected to s5_0
-  - Port 3 (Device ID: 3) connected to s1_3
-Switch 3 (Node ID: 11) has 4 ports:
-  - Port 0 (Device ID: 0) connected to s0_4
-  - Port 1 (Device ID: 1) connected to s4_1
-  - Port 2 (Device ID: 2) connected to s5_1
-  - Port 3 (Device ID: 3) connected to s1_4
-Switch 4 (Node ID: 9) has 2 ports:
-  - Port 0 (Device ID: 0) connected to s2_1
-  - Port 1 (Device ID: 1) connected to s3_1
-Switch 5 (Node ID: 10) has 2 ports:
-  - Port 0 (Device ID: 0) connected to s2_2
-  - Port 1 (Device ID: 1) connected to s3_2
+  - Port 0 connected to h3
+  - Port 1 connected to h4
+  - Port 2 connected to h5
+  - Port 3 connected to s2_3
+  - Port 4 connected to s3_3
+Switch 2 (Node ID: 8) has 4 ports: [spine switch — connects s0 and s1]
+Switch 3 (Node ID: 11) has 4 ports: [spine switch — connects s0 and s1]
+Switch 4 (Node ID: 9) has 2 ports: [aggregation]
+Switch 5 (Node ID: 10) has 2 ports: [aggregation]
 
-=========== Host Connection Details ===========
-Host 6 (Node ID: 0) connected to Switch 0 at Port 0
-Host 7 (Node ID: 2) connected to Switch 0 at Port 1
-Host 8 (Node ID: 3) connected to Switch 0 at Port 2
-Host 9 (Node ID: 4) connected to Switch 1 at Port 0
-Host 10 (Node ID: 6) connected to Switch 1 at Port 1
-Host 11 (Node ID: 7) connected to Switch 1 at Port 2
-Node IP and MAC addresses:
-Node 0: IP = 10.1.1.1, MAC = 00:00:00:00:00:01
-Node 0: IP = 0x0a010101, MAC = 0x000000000001
-Node 1: IP = 10.1.1.2, MAC = 00:00:00:00:00:03
-Node 1: IP = 0x0a010102, MAC = 0x000000000003
-Node 2: IP = 10.1.1.3, MAC = 00:00:00:00:00:05
-Node 2: IP = 0x0a010103, MAC = 0x000000000005
-Node 3: IP = 10.1.1.4, MAC = 00:00:00:00:00:07
-Node 3: IP = 0x0a010104, MAC = 0x000000000007
-Node 4: IP = 10.1.1.5, MAC = 00:00:00:00:00:09
-Node 4: IP = 0x0a010105, MAC = 0x000000000009
-Node 5: IP = 10.1.1.6, MAC = 00:00:00:00:00:0b
-Node 5: IP = 0x0a010106, MAC = 0x00000000000b
-
-=========== Switch Port IP and MAC Addresses ===========
-Switch 0 Interface Details:
-  - Port 0 | MAC: 00:00:00:00:00:02 | IP: 0.0.0.0
-  - Port 1 | MAC: 00:00:00:00:00:04 | IP: 0.0.0.0
-  - Port 2 | MAC: 00:00:00:00:00:06 | IP: 0.0.0.0
-  - Port 3 | MAC: 00:00:00:00:00:0d | IP: 0.0.0.0
-  - Port 4 | MAC: 00:00:00:00:00:15 | IP: 0.0.0.0
-Switch 1 Interface Details:
-  - Port 0 | MAC: 00:00:00:00:00:08 | IP: 0.0.0.0
-  - Port 1 | MAC: 00:00:00:00:00:0a | IP: 0.0.0.0
-  - Port 2 | MAC: 00:00:00:00:00:0c | IP: 0.0.0.0
-  - Port 3 | MAC: 00:00:00:00:00:14 | IP: 0.0.0.0
-  - Port 4 | MAC: 00:00:00:00:00:1b | IP: 0.0.0.0
-Switch 2 Interface Details:
-  - Port 0 | MAC: 00:00:00:00:00:0e | IP: 0.0.0.0
-  - Port 1 | MAC: 00:00:00:00:00:0f | IP: 0.0.0.0
-  - Port 2 | MAC: 00:00:00:00:00:11 | IP: 0.0.0.0
-  - Port 3 | MAC: 00:00:00:00:00:13 | IP: 0.0.0.0
-Switch 3 Interface Details:
-  - Port 0 | MAC: 00:00:00:00:00:16 | IP: 0.0.0.0
-  - Port 1 | MAC: 00:00:00:00:00:18 | IP: 0.0.0.0
-  - Port 2 | MAC: 00:00:00:00:00:1a | IP: 0.0.0.0
-  - Port 3 | MAC: 00:00:00:00:00:1c | IP: 0.0.0.0
-Switch 4 Interface Details:
-  - Port 0 | MAC: 00:00:00:00:00:10 | IP: 0.0.0.0
-  - Port 1 | MAC: 00:00:00:00:00:17 | IP: 0.0.0.0
-Switch 5 Interface Details:
-  - Port 0 | MAC: 00:00:00:00:00:12 | IP: 0.0.0.0
-  - Port 1 | MAC: 00:00:00:00:00:19 | IP: 0.0.0.0
-*** P4 switch configuration: /home/p4/workdir/ns-3-dev-git/contrib/p4sim/examples/p4src/load_balance/load_balance.json, 
- /home/p4/workdir/ns-3-dev-git/contrib/p4sim/examples/p4src/load_balance/flowtable_0.txt for switch 0
-*** P4 switch configuration: /home/p4/workdir/ns-3-dev-git/contrib/p4sim/examples/p4src/load_balance/load_balance.json, 
- /home/p4/workdir/ns-3-dev-git/contrib/p4sim/examples/p4src/load_balance/flowtable_1.txt for switch 1
-*** P4 switch configuration: /home/p4/workdir/ns-3-dev-git/contrib/p4sim/examples/p4src/load_balance/load_balance.json, 
- /home/p4/workdir/ns-3-dev-git/contrib/p4sim/examples/p4src/load_balance/flowtable_2.txt for switch 2
-*** P4 switch configuration: /home/p4/workdir/ns-3-dev-git/contrib/p4sim/examples/p4src/load_balance/load_balance.json, 
- /home/p4/workdir/ns-3-dev-git/contrib/p4sim/examples/p4src/load_balance/flowtable_3.txt for switch 3
-*** P4 switch configuration: /home/p4/workdir/ns-3-dev-git/contrib/p4sim/examples/p4src/load_balance/load_balance.json, 
- /home/p4/workdir/ns-3-dev-git/contrib/p4sim/examples/p4src/load_balance/flowtable_4.txt for switch 4
-*** P4 switch configuration: /home/p4/workdir/ns-3-dev-git/contrib/p4sim/examples/p4src/load_balance/load_balance.json, 
- /home/p4/workdir/ns-3-dev-git/contrib/p4sim/examples/p4src/load_balance/flowtable_5.txt for switch 5
-TraceConnectWithoutContext for switch 0.
-TraceConnectWithoutContext for switch 2.
-TraceConnectWithoutContext for switch 3.
-TraceConnectWithoutContext for switch 5.
 Running simulation...
 P4 switch 1 thrift port: 9090
 P4 switch 2 thrift port: 9091
-P4 switch 3 thrift port: 9092
-P4 switch 4 thrift port: 9093
-P4 switch 5 thrift port: 9094
-P4 switch 6 thrift port: 9095
-Time: 1s | Throughput (Mbps) - Switch0(Rx): 0, Switch2(Rx): 0, Switch3(Rx): 0, Switch5(Tx): 0
-Time: 2s | Throughput (Mbps) - Switch0(Rx): 0, Switch2(Rx): 0, Switch3(Rx): 0, Switch5(Tx): 0
-Time: 3s | Throughput (Mbps) - Switch0(Rx): 0, Switch2(Rx): 0, Switch3(Rx): 0, Switch5(Tx): 0
-Time: 4s | Throughput (Mbps) - Switch0(Rx): 0, Switch2(Rx): 0, Switch3(Rx): 0, Switch5(Tx): 0
-Time: 5s | Throughput (Mbps) - Switch0(Rx): 56.6681, Switch2(Rx): 28.8926, Switch3(Rx): 27.7589, Switch5(Tx): 56.6681
-Time: 6s | Throughput (Mbps) - Switch0(Rx): 49.1824, Switch2(Rx): 24.6829, Switch3(Rx): 23.7243, Switch5(Tx): 48.3488
-Time: 7s | Throughput (Mbps) - Switch0(Rx): 104.2, Switch2(Rx): 53.142, Switch3(Rx): 51.058, Switch5(Tx): 104.2
-Time: 8s | Throughput (Mbps) - Switch0(Rx): 65.0208, Switch2(Rx): 33.5607, Switch3(Rx): 32.2353, Switch5(Tx): 65.8544
-Time: 9s | Throughput (Mbps) - Switch0(Rx): 0, Switch2(Rx): 0, Switch3(Rx): 0, Switch5(Tx): 0
-Time: 10s | Throughput (Mbps) - Switch0(Rx): 87.528, Switch2(Rx): 44.5893, Switch3(Rx): 42.8637, Switch5(Tx): 87.3946
-Time: 11s | Throughput (Mbps) - Switch0(Rx): 39.1792, Switch2(Rx): 19.8063, Switch3(Rx): 19.0144, Switch5(Tx): 38.8208
-Time: 12s | Throughput (Mbps) - Switch0(Rx): 55.0176, Switch2(Rx): 28.284, Switch3(Rx): 27.167, Switch5(Tx): 55.5094
-Time: 13s | Throughput (Mbps) - Switch0(Rx): 52.5168, Switch2(Rx): 26.5668, Switch3(Rx): 25.5332, Switch5(Tx): 52.0416
-Time: 14s | Throughput (Mbps) - Switch0(Rx): 0, Switch2(Rx): 0.216736, Switch3(Rx): 0.200064, Switch5(Tx): 0.475152
-Time: 15s | Throughput (Mbps) - Switch0(Rx): 0, Switch2(Rx): 0, Switch3(Rx): 0, Switch5(Tx): 0
-Time: 16s | Throughput (Mbps) - Switch0(Rx): 0, Switch2(Rx): 0, Switch3(Rx): 0, Switch5(Tx): 0
-Time: 17s | Throughput (Mbps) - Switch0(Rx): 0, Switch2(Rx): 0, Switch3(Rx): 0, Switch5(Tx): 0
-Time: 18s | Throughput (Mbps) - Switch0(Rx): 0, Switch2(Rx): 0, Switch3(Rx): 0, Switch5(Tx): 0
-Time: 19s | Throughput (Mbps) - Switch0(Rx): 0, Switch2(Rx): 0, Switch3(Rx): 0, Switch5(Tx): 0
-Time: 20s | Throughput (Mbps) - Switch0(Rx): 0, Switch2(Rx): 0, Switch3(Rx): 0, Switch5(Tx): 0
-Time: 21s | Throughput (Mbps) - Switch0(Rx): 0, Switch2(Rx): 0, Switch3(Rx): 0, Switch5(Tx): 0
-Time: 22s | Throughput (Mbps) - Switch0(Rx): 0, Switch2(Rx): 0, Switch3(Rx): 0, Switch5(Tx): 0
+...
+Time:  5s | Switch0(Rx):  56.67, Switch2(Rx): 28.89, Switch3(Rx): 27.76, Switch5(Tx):  56.67
+Time:  6s | Switch0(Rx):  49.18, Switch2(Rx): 24.68, Switch3(Rx): 23.72, Switch5(Tx):  48.35
+Time:  7s | Switch0(Rx): 104.20, Switch2(Rx): 53.14, Switch3(Rx): 51.06, Switch5(Tx): 104.20
+Time:  8s | Switch0(Rx):  65.02, Switch2(Rx): 33.56, Switch3(Rx): 32.24, Switch5(Tx):  65.85
+Time: 10s | Switch0(Rx):  87.53, Switch2(Rx): 44.59, Switch3(Rx): 42.86, Switch5(Tx):  87.39
+Time: 11s | Switch0(Rx):  39.18, Switch2(Rx): 19.81, Switch3(Rx): 19.01, Switch5(Tx):  38.82
+Time: 12s | Switch0(Rx):  55.02, Switch2(Rx): 28.28, Switch3(Rx): 27.17, Switch5(Tx):  55.51
+Time: 13s | Switch0(Rx):  52.52, Switch2(Rx): 26.57, Switch3(Rx): 25.53, Switch5(Tx):  52.04
 Simulate Running time: 109972ms
 Total Running time: 110030ms
 Run successfully!
-(p4dev-python-venv) p4@p4:~/workdir/ns-3-dev-git$
 ```
 
-Because the large `*.pcap` files, so this test we didn't record the `*.pcap` files.
+</details>
+
+---
+
+## Connection to Paper
+
+| Paper section | Figure | Description |
+|--------------|--------|-------------|
+| Section 5.2 — Load Balancing | Figure 7 | Per-path throughput showing ~50/50 ECMP distribution |
