@@ -566,7 +566,9 @@ See [plot/Readme.md](plot/Readme.md) for descriptions of all scripts and their d
 
 ## References
 
-> Some of the documents were written with the assistance of DeepSeek.
+Blog: [P4 Developer Days](https://p4.org/event/p4-developer-days-p4sim-protocol-independent-packet-processors-in-ns-3/) – P4sim: Protocol-Independent Packet Processors in ns-3
+
+> Some of the documents were written with the assistance of DeepSeek and Claude.
 
 - [1] `basic_tunnel` based on [p4lang/tutorials/basic_tunnel](https://github.com/p4lang/tutorials/tree/master/exercises/basic_tunnel)
 - [2] `firewall` based on [p4lang/tutorials/firewall](https://github.com/p4lang/tutorials/tree/master/exercises/firewall)
